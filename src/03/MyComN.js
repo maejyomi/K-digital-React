@@ -1,10 +1,10 @@
 import style from './MyCom.module.css';
 
-const MyComN = (probs) => {
+const MyComN = (props) => {
 
     return (
         <>
-            <div className={style.numDiv}>{probs.num}</div>
+            <div className={style.numDiv}>{props.num}</div>
         </>
         
     );

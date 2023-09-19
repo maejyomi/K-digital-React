@@ -14,7 +14,7 @@ const MyDiv = () => {
     return (
         <main className="container">
             <article>
-                <header><h1>probs div</h1></header>
+                <header><h1>props div</h1></header>
                 <MyDiv1 n={n}/>
 
                 <footer>
