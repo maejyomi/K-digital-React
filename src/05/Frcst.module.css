@@ -1,0 +1,41 @@
+.dtcnKey {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dtcnKey:hover {
+    background-color: #60a2e0;
+    color: white;
+}
+
+.sp1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.spH,
+.spL,
+.spM {
+    font-weight: bold;
+
+}
+
+.spH {
+    color: red;
+    background-color: #fffab5;
+}
+
+.spL {
+    color: blue;
+}
+
+.spM {
+    color: green;
+}
