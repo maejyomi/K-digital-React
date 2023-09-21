@@ -1,35 +1,24 @@
-import style from './Lotto.module.css'
-import { useState } from 'react';
+import { useEffect, useState } from "react";
+import LottoNums from "./LottoNums";
 
 const Lotto = () => {
-    // return 윗 부분에 자바스크립트 코드 작성 가능
+    const [nums, setNums] = useState();
 
-    let numArr = [];
-    //let lottoTag = [];
-    //state 변수의 형식
-    const[lottoTag, setLottoTag] = useState([]); 
+    // 버튼 클릭 이벤트
+    const handleClick = () => {
+        let temp = [];
 
-    const getNum = () => {
-        numArr = [];
-        while(numArr.length < 7){
+        while(temp.length < 7){
             let n = Math.floor(Math.random()*45)+1;
-            if (numArr.indexOf(n) < 0){
-                numArr.push(n);
-            }
+            if(temp.indexOf(n)<0) temp.push(n);
         }
-        console.log(numArr);
-
-        // lottoTag = numArr.map((item) =>
-        //     <div className={style.lottonum}>1</div>
-        // );
-        // console.log(lottoTag);
-        
-        setLottoTag(numArr.map((item)=>
-            <div className={style.lottonum}>{item}</div>
-        ));
-
-        
+        setNums(temp);
     }
+
+    // nums 변수 변경시 수행
+    useEffect(()=>{
+       console.log("nums = ", nums)
+    }, [nums]);
 
     return (
         <main className="container">
@@ -37,12 +26,10 @@ const Lotto = () => {
                 <header>
                     <h1>로또 생성기</h1>
                 </header>
-                <div className={style.lottobox}>
-                    {lottoTag}
-                </div>
+                { nums? <LottoNums ns={nums} /> : '숫자가 없습니다' }
+                {/* undefined는 false, 맨 처음 실행했을 때 nums = undefined */}
                 <footer>
-                    {/* <button onClick={getNum}>생성하기</button> */}
-                    <button onClick={() => getNum()}>생성하기</button>
+                    <button onClick={handleClick}>생성하기</button>
                 </footer>
             </article>
         </main>

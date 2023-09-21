@@ -4,13 +4,39 @@
     align-items: center;
   }
   
-  .lottonum {
+  .lottonum1, 
+  .lottonum2, 
+  .lottonum3, 
+  .lottonum4,
+  .lottonum5 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50px;
     height: 50px;
     margin: 5px;
-    border: 1px solid gray;
+    
     border-radius: 50%;
+    color: white;
+    font-weight: bold;
+  }
+
+  .lottonum1 {
+    background-color: #f3bb04f1;
+  }
+
+  .lottonum2 {
+    background-color: #1582ff;
+  }
+  
+  .lottonum3 {
+    background-color: #ff9100;
+  }
+  
+  .lottonum4 {
+    background-color: #c5c5c5;
+  }
+  
+  .lottonum5 {
+    background-color: #f73535;
   }
