@@ -1,4 +1,4 @@
-import GalleryCard from "./GalleryCard";
+import GalleryCard from "../comm/GalleryCard";
 
 const GalleryItem = (props) => {
     console.log(props.item);
