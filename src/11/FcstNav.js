@@ -15,7 +15,7 @@ const FcstNav = () => {
             <ul>
                 <li>
                     <Link to='/'>
-                        <AiOutlineHome className="text-2xl hover:text-sky-500 hover:scale-125 transition-all" />
+                        <AiOutlineHome className="text-2xl hover:text-sky-300 hover:scale-125 transition-all" />
                     </Link>
                 </li>
             </ul>

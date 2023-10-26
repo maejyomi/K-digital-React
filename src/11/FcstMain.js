@@ -32,12 +32,22 @@ const FcstMain = () => {
         // 1. select 값을 가져옴
         // 2. getxy에서 sel 값과 행정구역코드가 같은 자료 추출
         // 3. state변수 area, x, y 변경
-
+        if(selRef.current.value == '') {
+            setArea();
+            setX();
+            setY();
+            return;
+        }
         let temp = getxy.filter((item)=>item.행정구역코드 == selRef.current.value)[0];
 
         setArea(temp['1단계']);
         setX(temp['격자 X']);
         setY(temp['격자 Y']);
+    }
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        alert("정보를 입력해주세요");
     }
 
     useEffect(()=>{
@@ -67,14 +77,20 @@ const FcstMain = () => {
                         </select>
                     </div>
                     <div>
-                        <Link to={`/ultra/${dt}/${area}/${x}/${y}`}>
-                            <ButtonBlue caption='초단기예보'/>
-                        </Link>
+                        {
+                            (dt === undefined) | (area === undefined)
+                            ? <ButtonBlue caption='초단기예보' handleClick={handleClick}/>
+                            :<Link to={`/ultra/${dt}/${area}/${x}/${y}`}><ButtonBlue caption='초단기예보'/></Link>
+                        
+                        }
                     </div>
                     <div>
-                        <Link to={`/vilage/${dt}/${area}/${x}/${y}`}>
-                        <ButtonBlue caption='단기예보'/>
-                        </Link>
+                        {
+                            (dt === undefined) | (area === undefined)
+                            ? <ButtonBlue caption='단기예보' handleClick={handleClick}/>
+                            :<Link to={`/vilage/${dt}/${area}/${x}/${y}`}><ButtonBlue caption='단기예보'/></Link>
+                        }
+                        
                     </div>
                 </div>
             </form>
