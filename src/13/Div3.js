@@ -1,8 +1,6 @@
 import ButtonBlue from '../comm/ButtonBlue';
 
 const Div3 = ({num, setNum}) => {
-    console.log(num);
-
     const handleUp = () =>{
         setNum(num+1);
     }
