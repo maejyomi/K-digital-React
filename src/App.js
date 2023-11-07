@@ -11,7 +11,10 @@ import './App.css';
 // import Busan from './09/Busan';
 // import RouteMain from './10/RouteMain';
 // import Fcst from './11/Fcst';
-import Fcst from './12/Fcst';
+// import Fcst from './12/Fcst';
+// import DivMain from './13/DivMain';
+import DivMain from './14/DivMain';
+import { RecoilRoot } from 'recoil';
 
 function App() {
   return (
@@ -26,7 +29,10 @@ function App() {
     //  <Gallery />
     //<Busan />
     // <RouteMain />
-    <Fcst />
+    // <Fcst />
+    <RecoilRoot>
+      <DivMain />
+    </RecoilRoot>
   );
 }
 
