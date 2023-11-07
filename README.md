@@ -22,6 +22,8 @@
 
 + 11.02 : 테이블 컴포넌트, props drilling
 
++ 11.07 : Recoil, Local Storage
+
 # src
 
 + 01 : 시계 만들기
@@ -46,4 +48,8 @@
 
 + 12 : 기상청 단기예보 조회 서비스
 
-+ 13 : 리액트 Recoil
++ 13 : props drilling
+
++ 14 : Recoil
+
++ 15 : Local Storage
